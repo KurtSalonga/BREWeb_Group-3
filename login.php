@@ -37,10 +37,10 @@
       padding: 30px;
       border-radius: 0 0 25px 25px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
     }
 
     .login-title {
-      text-align: center;
       font-family: 'Irish Grover', cursive;
       font-size: 36px;
       margin: 10px 0 20px 0;
@@ -49,14 +49,18 @@
     label {
       display: block;
       font-weight: 600;
-      margin-top: 15px;
       font-size: 14px;
+      text-align: left;
+      margin-bottom: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
     }
 
     .input-group, .input-block {
       position: relative;
-      width: 95%;
-      margin-bottom: 10px;
+      width: 90%;
+      margin: 0 auto 15px auto;
     }
 
     .input-block input,
@@ -66,7 +70,6 @@
       font-size: 16px;
       border: none;
       border-radius: 12px;
-      margin-top: 5px;
       box-sizing: border-box;
     }
 
@@ -86,7 +89,8 @@
     .forgot {
       text-align: right;
       font-size: 12px;
-      margin-top: 5px;
+      margin-top: -10px;
+      margin-right: 5%;
       font-weight: 500;
     }
 
@@ -97,16 +101,15 @@
     }
 
     .login-button {
-      font-size: 18px;
+      font-size: 16px;
       background-color: white;
       color: black;
       border: none;
       border-radius: 14px;
       font-weight: 800;
       cursor: pointer;
-      padding: 16px 32px;
-      margin: 25px auto 15px auto;
-      display: block;
+      padding: 14px 40px;
+      margin-top: 25px;
       transition: background-color 0.3s;
     }
 
@@ -116,20 +119,20 @@
 
     .back-button {
       font-size: 14px;
-      background-color: #6F4F37; /* Coffee brown color */
+      background-color: #6F4F37;
       color: white;
       border: none;
       border-radius: 14px;
       font-weight: 700;
       cursor: pointer;
       padding: 12px 24px;
+      margin-top: 20px;
+      width: 90%;
       transition: background-color 0.3s;
-      display: block;
-      margin: 15px auto 0 auto;
     }
 
     .back-button:hover {
-      background-color: #4B3621; /* Darker brown color on hover */
+      background-color: #4B3621;
     }
   </style>
 </head>
@@ -164,7 +167,7 @@
       </form>
 
       <button class="back-button" onclick="window.location.href='index.html';">
-        IF YOU'RE A CUSTOMER, CLICK HERE TO RETURN TO THE HOMEPAGE
+        IF YOU'RE A CUSTOMER, PLEASE RETURN TO HOMEPAGE
       </button>
     </div>
   </div>
