@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Irish+Grover&display=swap" rel="stylesheet">
+  <title>LOGIN PAGE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -19,17 +19,49 @@
     .top-bar {
       background-color: black;
       color: white;
-      text-align: center;
-      padding: 10px;
+      padding: 20px 30px 25px 30px;
       border-radius: 15px 15px 0 0;
-      font-weight: bold;
+      text-align: center;
     }
 
-    .top-bar span {
-      display: block;
-      font-size: 14px;
-      font-weight: normal;
+    .main-title {
+      font-family: 'Itim', cursive;
+      font-size: 28px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .coffee-part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .underline {
+      width: 100px;
+      height: 10px;
+      background-color: white;
       margin-top: 5px;
+    }
+
+    .co-part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 1px;
+    }
+
+    .co-part .co {
+      margin-bottom: 0;
+    }
+
+    .sub-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 1px;
+      line-height: 1;
     }
 
     .login-box {
@@ -108,27 +140,36 @@
       border-radius: 14px;
       font-weight: 800;
       cursor: pointer;
-      padding: 14px 40px;
-      margin-top: 25px;
+      padding: 16px 50px;
+      margin: 25px auto 0 auto;
       transition: background-color 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .login-button:hover {
-      background-color: #f0f0f0;
+      background-color: #d5d5d5;
     }
 
     .back-button {
-      font-size: 14px;
+      font-size: 13px;
       background-color: #6F4F37;
       color: white;
       border: none;
       border-radius: 14px;
       font-weight: 700;
       cursor: pointer;
-      padding: 12px 24px;
+      padding: 10px 15px;
       margin-top: 20px;
       width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
       transition: background-color 0.3s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .back-button:hover {
@@ -140,8 +181,16 @@
 
   <div class="container">
     <div class="top-bar">
-      COFFEE&CO.
-      <span>CAFE</span>
+      <div class="main-title">
+        <div class="coffee-part">
+          <div>COFFEE&</div>
+          <div class="underline"></div>
+        </div>
+        <div class="co-part">
+          <div class="co">CO.</div>
+          <div class="sub-title">CAFE</div>
+        </div>
+      </div>
     </div>
 
     <div class="login-box">
@@ -166,8 +215,8 @@
         <button type="submit" class="login-button">LOGIN</button>
       </form>
 
-      <button class="back-button" onclick="window.location.href='index.html';">
-        IF YOU'RE A CUSTOMER, PLEASE RETURN TO HOMEPAGE
+      <button class="back-button" onclick="window.location.href='homepage.php';">
+        IF YOU'RE A CUSTOMER, CLICK HERE TO RETURN TO THE HOMEPAGE
       </button>
     </div>
   </div>
