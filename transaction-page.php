@@ -1,63 +1,62 @@
-<?php include 'data.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Transaction Page</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>TRANSACTION PAGE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="transaction-page.css" />
 </head>
 <body>
-<div class="container">
-  <!-- Sidebar -->
+
+<div class="header">
+  <div class="header-left">
+    <div class="hamburger">☰</div>
+    <div class="transaction-title">Transaction</div>
+    <button class="search-button" title="Search">🔍</button>
+  </div>
+  <div class="logo">BREWeb</div>
+</div>
+
+<div class="main-container">
   <div class="sidebar">
-    <div class="header">
-      <button class="menu-btn">☰</button>
-      <span>Transaction</span>
-      <input type="text" placeholder="🔍" />
-    </div>
     <div class="transaction-list">
-      <?php
-      $current_date = "";
-      foreach ($transactions as $txn) {
-          if ($txn["date"] !== $current_date) {
-              echo "<div class='date'>DATE: {$txn["date"]}</div>";
-              $current_date = $txn["date"];
-          }
-          echo "<div class='row'>";
-          echo "<span>TIME: {$txn["time"]}</span>";
-          echo "<span>P{$txn["total"]}</span>";
-          echo "</div>";
-      }
-      ?>
+      <div class="date-label">DATE:</div>
+      <div class="transaction-entry"><span>TIME:</span><span>TOTAL PRICE</span></div>
+      <div class="transaction-entry"><span>TIME:</span><span>TOTAL PRICE</span></div>
+      <div class="transaction-entry"><span>TIME:</span><span>TOTAL PRICE</span></div>
+      <div class="date-label">DATE:</div>
+      <div class="transaction-entry"><span>TIME:</span><span>TOTAL PRICE</span></div>
+      <div class="transaction-entry"><span>TIME:</span><span>TOTAL PRICE</span></div>
     </div>
   </div>
 
-  <!-- Details Panel -->
-  <div class="details">
-    <?php $active_txn = $transactions[0]; ?>
-    <div class="top-bar">
+  <div class="right-panel">
+    <div class="top-info">
       <span>Total</span>
       <span>Items</span>
     </div>
-    <div class="total">P<?php echo $active_txn["total"]; ?></div>
-    <div class="item-list">
-      <?php foreach ($active_txn["items"] as $item): ?>
-        <div class="item">
-          <span><?php echo $item["name"]; ?></span>
-          <span>P<?php echo $item["price"]; ?></span>
+    <div class="total-amount">P185</div>
+
+    <div class="item-box">
+      <div class="item-content">
+        <div class="item-row">
+          <span>Iced Matcha Milk</span>
+          <span>P185</span>
         </div>
-      <?php endforeach; ?>
-    </div>
-    <div class="bottom-bar">
-      <span>Subtotal</span>
-      <span>P<?php echo $active_txn["total"]; ?></span>
-    </div>
-    <div class="actions">
-      <button class="reprint">Reprint Receipt #<?php echo $active_txn["receipt_no"]; ?></button>
-      <button class="refund">REFUND</button>
+      </div>
+
+      <div class="subtotal">
+        <span>Subtotal:</span>
+        <span>P185</span>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-reprint">Reprint<br>Receipt #000</button>
+        <button class="btn btn-refund">REFUND</button>
+      </div>
     </div>
   </div>
 </div>
+
 </body>
 </html>
