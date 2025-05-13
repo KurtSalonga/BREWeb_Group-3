@@ -26,11 +26,7 @@
             <h3>Cash Sales</h3>
             <div class="amount">₱3,000</div>
         </div>
-        <div class="card">
-            <h3>Grab Sales</h3>
-            <div class="amount">₱1,500</div>
-        </div>
-    </div>
+</div>
 
     <div class="bottom-row">
         <div class="large-box">
